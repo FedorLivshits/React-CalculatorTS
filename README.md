@@ -1,1 +1,1 @@
-# React-Calculator-TypeScript-
+# React-CalculatorTS
