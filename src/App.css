@@ -1,0 +1,125 @@
+.App-header {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(8px + 2vmin);
+    color: white;
+}
+
+
+.counter__inner {
+    width: 400px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #282c34;
+}
+
+.counter__window {
+    background-color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.count-num {
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+    margin: 0 auto;
+}
+.count-num-max{
+    font-size: 50px;
+    font-weight: 600;
+    color: red;
+    margin: 0 auto;
+}
+
+.counter-btns {
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 1px solid white;
+    margin-top: 15px;
+    height: 300px;
+    border-radius: 5px;
+}
+.calculate__line-btns-1{
+    margin: 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculate__line-btns-2{
+    margin: 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculate__line-btns-3{
+    margin: 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculate__line-btns-4{
+    margin: 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculate__line-btns-5{
+    margin: 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+}
+
+.counter__inc-btn {
+    margin-left: 15px;
+}
+
+.counter__reset-btn {
+    margin-right: 15px;
+}
+.btn-disabled{
+    background-color: rgba(97, 218, 251, 0.26);
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+.counter__inc-btn-disabled{
+    margin-left: 15px;
+}
+.counter__reset-btn-disabled{
+    margin-right: 15px;
+}
+
+.operator{
+    background-color: orange;
+}
+.calculator-title{
+    text-align: center;
+   margin: 10px;
+}
