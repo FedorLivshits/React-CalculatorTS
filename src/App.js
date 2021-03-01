@@ -3,10 +3,19 @@ import React, {useState} from "react";
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <div className="counter__inner">
-                    <div className="counter__window">
+        <Calculator/>
+    );
+}
+
+function Calculator() {
+    const onButtonClick = (e) => {
+        setFirstNumValue(e.currentTarget.value)
+    }
+    return (
+        <div className="calculator">
+            <header className="calculator-page">
+                <div className="calculator__inner">
+                    <div className="calculator__window">
 
 
                     </div>
@@ -17,7 +26,7 @@ function App() {
                 </div>
             </header>
         </div>
-    );
+    )
 }
 
 const PanelButton = (props) => {
@@ -66,12 +75,14 @@ function NumberButton(props) {
         </button>
     )
 }
+
 function OperatorButton(props) {
-   return(
-       <button className="btn operator">
-           {props.buttonValue}
-       </button>
-   )
+    return (
+        <button className="btn operator">
+            {props.buttonValue}
+        </button>
+    )
 }
+
 export default App;
 

@@ -1,4 +1,4 @@
-.App-header {
+.calculator-page {
     background-color: white;
     min-height: 100vh;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 
-.counter__inner {
+.calculator__inner {
     width: 400px;
     height: 500px;
     border: 1px solid white;
@@ -18,7 +18,7 @@
     background-color: #282c34;
 }
 
-.counter__window {
+.calculator__window {
     background-color: white;
     margin-right: 15px;
     margin-left: 15px;
