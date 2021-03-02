@@ -1,5 +1,5 @@
 .calculator-page {
-background-color: rgb(230,233,235);
+    background-color: rgb(230, 233, 235);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,63 +16,69 @@ background-color: rgb(230,233,235);
     background-color: rgba(45, 55, 66, 0.23);
     box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-border-radius: 8px;
+    border-radius: 8px;
+    background: rgb(140, 72, 165); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c48a5', endColorstr='#fca079', GradientType=1); /* IE6-9 */
 }
 
 .calculator__window {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c0106e+17,ffce5b+99 */
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8c48a5+0,fca079+100 */
-    background: rgb(140,72,165); /* Old browsers */
-    background: -moz-linear-gradient(left,  rgba(140,72,165,1) 0%, rgba(252,160,121,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  rgba(140,72,165,1) 0%,rgba(252,160,121,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(140,72,165,1) 0%,rgba(252,160,121,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c48a5', endColorstr='#fca079',GradientType=1 ); /* IE6-9 */
-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
     border-top-right-radius: 8px;
     height: 200px;
 }
 
-.calculator__result-window{
+.calculator__result-window {
     display: flex;
     justify-content: flex-end;
 }
-.calculator__result-window span{
-margin-right: 40px;
+
+.calculator__result-window span {
+    margin-right: 40px;
     margin-top: 40px;
     font-size: 60px;
 }
-.calculator__operation-window{
+
+.calculator__operation-window {
     display: flex;
     justify-content: flex-end;
 }
-.calculator__operation-window span{
+
+.calculator__operation-window span {
     margin-right: 40px;
     margin-top: 30px;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.51);
 }
+
 .counter-btns {
     height: 300px;
     border-radius: 5px;
 
 }
-.row{
+
+.row {
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn {
 
+.btn {
     color: black;
     font-size: 25px;
     font-weight: 400;
     border: none;
-background-color: rgb(244,244,244);
+    background-color: rgb(244, 244, 244);
     cursor: pointer;
     height: 80px;
     width: 94px;
+}
+.btn:hover{
+    color: orange;
 }
 
 .counter__inc-btn {
@@ -84,15 +90,27 @@ background-color: rgb(244,244,244);
 }
 
 
-.operator{
-    background-color: rgb(234,234,234);
+.operator {
+    background-color: rgb(234, 234, 234);
+    color: rgb(228 121 78);
 }
-.equal{
-    background: rgb(140,72,165); /* Old browsers */
-   color: white;
+
+.equal {
+    background: rgb(140, 72, 165); /* Old browsers */
+    color: white;
     font-size: 40px;
+    border-bottom-right-radius: 8px;
 }
-.calculator-title{
+.more{
+    border-bottom-left-radius: 8px;
+    color: rgb(140, 72, 165);
+}
+
+.calculator-title {
     text-align: center;
-   margin: 10px;
+    margin: 10px;
+}
+
+button:focus {
+    outline: none !important
 }
