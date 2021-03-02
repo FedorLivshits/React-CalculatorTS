@@ -1,21 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 import PanelButton from "./PanelButton";
+import {CalculatorContext} from "./CalculatorLogic";
 
-function Calculator(props) {
-
+function Calculator() {
+    const {  numValue } = useContext(CalculatorContext);
     return (
         <div className="calculator">
             <header className="calculator-page">
                 <div className="calculator__inner">
                     <div className="calculator__window">
                         <div className="calculator__result-window">
-                            <span>{props.result}</span>
+                            <span></span>
                         </div>
                         <div className="calculator__operation-window">
-                            <span>{props.numValue}</span>
+                            <span>{(numValue)}</span>
                         </div>
                     </div>
-                    <PanelButton handleValue={props.handleValue} />
+                    <PanelButton />
                 </div>
             </header>
         </div>
