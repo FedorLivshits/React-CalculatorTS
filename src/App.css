@@ -1,5 +1,5 @@
 .calculator-page {
-    background-color: white;
+background-color: rgb(230,233,235);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,86 +11,68 @@
 
 
 .calculator__inner {
-    width: 400px;
-    height: 500px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: #282c34;
+    width: 375px;
+    height: 600px;
+    background-color: rgba(45, 55, 66, 0.23);
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+border-radius: 8px;
 }
 
 .calculator__window {
-    background-color: white;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 15px;
-    height: 100px;
-    border-radius: 5px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c0106e+17,ffce5b+99 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8c48a5+0,fca079+100 */
+    background: rgb(140,72,165); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(140,72,165,1) 0%, rgba(252,160,121,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(140,72,165,1) 0%,rgba(252,160,121,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(140,72,165,1) 0%,rgba(252,160,121,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c48a5', endColorstr='#fca079',GradientType=1 ); /* IE6-9 */
+border-top-left-radius: 10px;
+    border-top-right-radius: 8px;
+    height: 200px;
+}
+
+.calculator__result-window{
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
-
-.count-num {
-    font-size: 50px;
-    font-weight: 600;
-    color: black;
-    margin: 0 auto;
+.calculator__result-window span{
+margin-right: 40px;
+    margin-top: 40px;
+    font-size: 60px;
 }
-.count-num-max{
-    font-size: 50px;
-    font-weight: 600;
-    color: red;
-    margin: 0 auto;
+.calculator__operation-window{
+    display: flex;
+    justify-content: flex-end;
 }
-
+.calculator__operation-window span{
+    margin-right: 40px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.51);
+}
 .counter-btns {
-    margin-right: 15px;
-    margin-left: 15px;
-    border: 1px solid white;
-    margin-top: 15px;
     height: 300px;
     border-radius: 5px;
+
 }
-.calculate__line-btns-1{
-    margin: 15px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.calculate__line-btns-2{
-    margin: 15px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.calculate__line-btns-3{
-    margin: 15px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.calculate__line-btns-4{
-    margin: 15px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.calculate__line-btns-5{
-    margin: 15px 10px 10px;
+.row{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .btn {
-    background-color: white;
+
     color: black;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 400;
     border: none;
-    border-radius: 5px;
+background-color: rgb(244,244,244);
     cursor: pointer;
-    height: 40px;
-    width: 70px;
+    height: 80px;
+    width: 94px;
 }
 
 .counter__inc-btn {
@@ -100,24 +82,15 @@
 .counter__reset-btn {
     margin-right: 15px;
 }
-.btn-disabled{
-    background-color: rgba(97, 218, 251, 0.26);
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 30px;
-}
-.counter__inc-btn-disabled{
-    margin-left: 15px;
-}
-.counter__reset-btn-disabled{
-    margin-right: 15px;
-}
+
 
 .operator{
-    background-color: orange;
+    background-color: rgb(234,234,234);
+}
+.equal{
+    background: rgb(140,72,165); /* Old browsers */
+   color: white;
+    font-size: 40px;
 }
 .calculator-title{
     text-align: center;

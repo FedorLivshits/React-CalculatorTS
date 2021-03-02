@@ -8,20 +8,26 @@ function App() {
 }
 
 function Calculator() {
-    const onButtonClick = (e) => {
-        setFirstNumValue(e.currentTarget.value)
+    let [firsNumValue, setFirstNumValue] = useState(0)
+
+    const onButtonClick = () => {
+       alert("Привет") //передать сюда value кнопки с цифрой и отправить в стэйт
     }
     return (
         <div className="calculator">
             <header className="calculator-page">
                 <div className="calculator__inner">
                     <div className="calculator__window">
-
-
+                        <div className="calculator__result-window">
+<span>1214</span>
+                        </div>
+                        <div className="calculator__operation-window">
+                           <span>1200 + 14</span>
+                        </div>
                     </div>
-                    <PanelButton/>
+                    <PanelButton onButtonClick={onButtonClick}/>
                     <div className="calculator-title">
-                        Calculator by Fedor Livshits
+
                     </div>
                 </div>
             </header>
@@ -33,31 +39,31 @@ const PanelButton = (props) => {
 
     return (
         <div className="counter-btns">
-            <div className="calculate__line-btns-1">
-                <OperatorButton buttonValue={"reset"}/>
+            <div className="row">
+                <OperatorButton buttonValue={"AC"}/>
                 <OperatorButton buttonValue={'x'}/>
                 <OperatorButton buttonValue={"%"}/>
                 <OperatorButton buttonValue={"/"}/>
             </div>
-            <div className="calculate__line-btns-2">
-                <NumberButton buttonValue={7}/>
+            <div className="row">
+                <NumberButton buttonValue={7} onButtonClick={props.onButtonClick}/>
                 <NumberButton buttonValue={8}/>
                 <NumberButton buttonValue={9}/>
                 <OperatorButton buttonValue={"*"}/>
             </div>
-            <div className="calculate__line-btns-3">
+            <div className="row">
                 <NumberButton buttonValue={4}/>
                 <NumberButton buttonValue={5}/>
                 <NumberButton buttonValue={6}/>
                 <OperatorButton buttonValue={"-"}/>
             </div>
-            <div className="calculate__line-btns-4">
+            <div className="row">
                 <NumberButton buttonValue={1}/>
                 <NumberButton buttonValue={2}/>
                 <NumberButton buttonValue={3}/>
                 <OperatorButton buttonValue={"+"}/>
             </div>
-            <div className="calculate__line-btns-5">
+            <div className="row">
                 <OperatorButton buttonValue={"more"}/>
                 <NumberButton buttonValue={0}/>
                 <OperatorButton buttonValue={","}/>
@@ -70,7 +76,7 @@ const PanelButton = (props) => {
 
 function NumberButton(props) {
     return (
-        <button className="btn">
+        <button className="btn" onClick={props.onButtonClick} value={props.buttonValue}>
             {props.buttonValue}
         </button>
     )
@@ -78,7 +84,7 @@ function NumberButton(props) {
 
 function OperatorButton(props) {
     return (
-        <button className="btn operator">
+        <button className={(props.buttonValue === "=") ? "btn operator equal" : "btn operator"}>
             {props.buttonValue}
         </button>
     )
