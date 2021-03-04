@@ -13,7 +13,6 @@ const CalculatorProvider = (props) => {
     const handleSetNumValue = (value) => {
         if ((!numValue.includes('.') || value !== '.') && numValue.length < 8) {
             setNumValue((numValue + value).replace(/^0+/, ''));
-            // setNumValue(numValue + value);
         }
     }
     //сохраняем число в другой стэйт для возможности ввода второго
@@ -22,23 +21,36 @@ const CalculatorProvider = (props) => {
         setNumValue("");
     }
 
+    //сохраняем оператор
+    const handleSetOperatorType = (operatorType) => {
+        if (numValue) {
+            setOperator(operatorType);
+            handleStoreValue();
+        }
+        if (storeValue) {
+            setOperator(operatorType);
+        }
+    }
+
+    //Сбрасываем введенные числа
     const handleResetValue = () => {
         setNumValue("")
         setStoreValue("");
         setOperator("");
     }
-
+    //Сбрасываем результат
     const handleResetResultValue = () => {
         setResult(0)
     }
+    //удаляем по одному символу
     const handleClearValue = () => {
         if (numValue !== "") {
             let clearNumber = numValue.slice(0, numValue.length - 1)
             setNumValue(clearNumber)
         }
-
     }
 
+    //меняем знак числа на противоположный
     const handleNegative = () => {
         if (numValue > 0) {
             setNumValue(`-${numValue}`)
@@ -52,22 +64,15 @@ const CalculatorProvider = (props) => {
         }
     }
 
-    const handleSetOperatorType = (operatorType) => {
-        if (numValue) {
-            setOperator(operatorType);
-            handleStoreValue();
-        }
-        if (storeValue) {
-            setOperator(operatorType);
-        }
-    }
+    //считаем результат
     const calculateResult = () => {
+
         if (numValue && storeValue && operator) {
             let num1 = parseInt(numValue)
             let num2 = parseInt(storeValue)
             switch (operator) {
                 case "+":
-                    setResult(num1 + num2);
+                        setResult(num1 + num2);
                     break
                 case "-":
                     setResult(num1 - num2);

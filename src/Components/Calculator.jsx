@@ -3,9 +3,15 @@ import PanelButton from "./PanelButton";
 import {CalculatorContext} from "./CalculatorLogic";
 
 function Calculator() {
-    const {  numValue, storeValue,operator, result } = useContext(CalculatorContext);
+    const {numValue, storeValue, operator, result} = useContext(CalculatorContext);
     return (
         <div className="calculator">
+            <div className="switch-inner">
+                <label className="switch">
+                    <input type="checkbox"/>
+                    <span className="slider round"></span>
+                </label>
+            </div>
             <header className="calculator-page">
                 <div className="calculator__inner">
                     <div className="calculator__window">
@@ -16,8 +22,9 @@ function Calculator() {
                             <span> {storeValue} {operator} {numValue} </span>
                         </div>
                     </div>
-                    <PanelButton />
+                    <PanelButton/>
                 </div>
+
             </header>
         </div>
     )
