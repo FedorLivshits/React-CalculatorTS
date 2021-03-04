@@ -3,17 +3,17 @@ import PanelButton from "./PanelButton";
 import {CalculatorContext} from "./CalculatorLogic";
 
 function Calculator() {
-    const {  numValue } = useContext(CalculatorContext);
+    const {  numValue, storeValue,operator, result } = useContext(CalculatorContext);
     return (
         <div className="calculator">
             <header className="calculator-page">
                 <div className="calculator__inner">
                     <div className="calculator__window">
                         <div className="calculator__result-window">
-                            <span></span>
+                            <span> {result}</span>
                         </div>
                         <div className="calculator__operation-window">
-                            <span>{(numValue)}</span>
+                            <span> {storeValue} {operator} {numValue} </span>
                         </div>
                     </div>
                     <PanelButton />

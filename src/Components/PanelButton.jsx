@@ -1,6 +1,7 @@
 import React from "react";
 import NumberButton from "./NumberButton";
 import OperatorButton from "./OperatorButton";
+import EqualButton from "./EqualButton";
 
 
 
@@ -35,7 +36,7 @@ const PanelButton = () => {
                 <OperatorButton buttonValue={"more"}/>
                 <NumberButton buttonValue={0}/>
                 <OperatorButton buttonValue={","}/>
-                <OperatorButton buttonValue={"="}/>
+                <EqualButton buttonValue={"="}/>
             </div>
 
         </div>
