@@ -3,6 +3,7 @@ import NumberButton from "./NumberButton";
 import OperatorButton from "./OperatorButton";
 import EqualButton from "./EqualButton";
 import ResetButton from "./ResetButton";
+import ClearButton from "./ClearButton";
 
 
 
@@ -11,7 +12,7 @@ const PanelButton = () => {
         <div className="counter-btns">
             <div className="row">
                 <ResetButton buttonValue={"AC"}/>
-                <OperatorButton buttonValue={'x'}/>
+                <ClearButton buttonValue={'x'}/>
                 <OperatorButton buttonValue={"%"}/>
                 <OperatorButton buttonValue={"/"}/>
             </div>

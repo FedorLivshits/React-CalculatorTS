@@ -2,12 +2,10 @@ import React, {useContext} from "react";
 import {CalculatorContext} from "./CalculatorLogic";
 
 function OperatorButton(props) {
-    const { handleSetOperatorType, handleClearValue, calculateResult} = useContext(CalculatorContext);
+    const {handleSetOperatorType} = useContext(CalculatorContext);
     return (
-        <button type="button"  onClick={(props.buttonValue === "=") ? {calculateResult} : (props.buttonValue === "AC") ? {handleClearValue} : () => handleSetOperatorType(props.buttonValue)
-
-               }
-                className={(props.buttonValue === "=") ? "btn operator equal" : (props.buttonValue === "more") ? "btn operator more" : "btn operator"}>
+        <button type="button"  onClick={() => handleSetOperatorType(props.buttonValue)}
+                className={(props.buttonValue === "more") ? "btn operator more" : "btn operator"}>
             {props.buttonValue}
         </button>
     )

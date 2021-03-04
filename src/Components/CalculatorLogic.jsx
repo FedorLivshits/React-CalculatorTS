@@ -25,6 +25,13 @@ const CalculatorProvider = (props) => {
         setStoreValue( "");
         setOperator("");
     }
+  const handleClearValue = () => {
+        if(numValue !== ""){
+            let clearNumber = numValue.slice(0, numValue.length - 1)
+            setNumValue(clearNumber)
+        }
+
+    }
 
 
     const handleSetOperatorType = (operatorType) => {
@@ -67,6 +74,7 @@ const CalculatorProvider = (props) => {
                 handleSetNumValue,
                 handleStoreValue,
                 handleResetValue,
+                handleClearValue,
                 handleSetOperatorType,
                 calculateResult,
                 storeValue,
