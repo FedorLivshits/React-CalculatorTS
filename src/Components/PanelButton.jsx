@@ -2,6 +2,7 @@ import React from "react";
 import NumberButton from "./NumberButton";
 import OperatorButton from "./OperatorButton";
 import EqualButton from "./EqualButton";
+import ResetButton from "./ResetButton";
 
 
 
@@ -9,7 +10,7 @@ const PanelButton = () => {
     return (
         <div className="counter-btns">
             <div className="row">
-                <OperatorButton buttonValue={"AC"}/>
+                <ResetButton buttonValue={"AC"}/>
                 <OperatorButton buttonValue={'x'}/>
                 <OperatorButton buttonValue={"%"}/>
                 <OperatorButton buttonValue={"/"}/>

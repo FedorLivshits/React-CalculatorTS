@@ -20,12 +20,10 @@ const CalculatorProvider = (props) => {
         setNumValue("");
     }
 
-    const handleClearValue = () => {
-        debugger
-        alert("hello")
-        // setNumValue("")
-        // setStoreValue( "");
-        // setOperator("");
+    const handleResetValue = () => {
+        setNumValue("")
+        setStoreValue( "");
+        setOperator("");
     }
 
 
@@ -68,7 +66,7 @@ const CalculatorProvider = (props) => {
                 numValue,
                 handleSetNumValue,
                 handleStoreValue,
-                handleClearValue,
+                handleResetValue,
                 handleSetOperatorType,
                 calculateResult,
                 storeValue,
