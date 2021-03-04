@@ -4,6 +4,7 @@ import OperatorButton from "./OperatorButton";
 import EqualButton from "./EqualButton";
 import ResetButton from "./ResetButton";
 import ClearButton from "./ClearButton";
+import NegativeButton from "./NegativeButton";
 
 
 
@@ -13,7 +14,7 @@ const PanelButton = () => {
             <div className="row">
                 <ResetButton buttonValue={"AC"}/>
                 <ClearButton buttonValue={'x'}/>
-                <OperatorButton buttonValue={"%"}/>
+                <NegativeButton buttonValue={"-/+"}/>
                 <OperatorButton buttonValue={"/"}/>
             </div>
             <div className="row">
@@ -37,7 +38,7 @@ const PanelButton = () => {
             <div className="row">
                 <OperatorButton buttonValue={"more"}/>
                 <NumberButton buttonValue={0}/>
-                <OperatorButton buttonValue={","}/>
+                <NumberButton buttonValue={"."}/>
                 <EqualButton buttonValue={"="}/>
             </div>
 

@@ -10,9 +10,11 @@ const CalculatorProvider = (props) => {
     let [darkTheme, setDarkTheme] = useState(false)
 
     //отрисовываем первое число
-    const handleSetNumValue = (e) => {
-        let value = +(e.currentTarget.value)
-        setNumValue(numValue + value);
+    const handleSetNumValue = (value) => {
+        if ((!numValue.includes('.') || value !== '.') && numValue.length < 8) {
+            setNumValue((numValue + value).replace(/^0+/, ''));
+            // setNumValue(numValue + value);
+        }
     }
     //сохраняем число в другой стэйт для возможности ввода второго
     const handleStoreValue = () => {
@@ -22,17 +24,33 @@ const CalculatorProvider = (props) => {
 
     const handleResetValue = () => {
         setNumValue("")
-        setStoreValue( "");
+        setStoreValue("");
         setOperator("");
     }
-  const handleClearValue = () => {
-        if(numValue !== ""){
+
+    const handleResetResultValue = () => {
+        setResult(0)
+    }
+    const handleClearValue = () => {
+        if (numValue !== "") {
             let clearNumber = numValue.slice(0, numValue.length - 1)
             setNumValue(clearNumber)
         }
 
     }
 
+    const handleNegative = () => {
+        if (numValue > 0) {
+            setNumValue(`-${numValue}`)
+        } else {
+            setNumValue(numValue.slice(1))
+        }
+        if (storeValue > 0) {
+            setStoreValue(`-${storeValue}`)
+        } else {
+            setStoreValue(storeValue.slice(1))
+        }
+    }
 
     const handleSetOperatorType = (operatorType) => {
         if (numValue) {
@@ -63,6 +81,9 @@ const CalculatorProvider = (props) => {
                 default:
                     break;
             }
+            setNumValue("")
+            setStoreValue("")
+            setOperator("")
         }
     };
 
@@ -75,7 +96,9 @@ const CalculatorProvider = (props) => {
                 handleStoreValue,
                 handleResetValue,
                 handleClearValue,
+                handleNegative,
                 handleSetOperatorType,
+                handleResetResultValue,
                 calculateResult,
                 storeValue,
                 operator,
