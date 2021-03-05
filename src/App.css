@@ -101,111 +101,47 @@ button:focus {
     outline: none !important
 }
 
-/*.calculator{*/
-/*    background-color: rgb(48, 66, 58);*/
-/*}*/
-/*.calculator-page {*/
-/*    min-height: 100vh;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    font-size: calc(8px + 2vmin);*/
-/*    color: white;*/
-/*}*/
-/*.calculator__inner {*/
-/*    width: 375px;*/
-/*    height: 600px;*/
-/*    background-color: rgba(38, 38, 38, 0.23);*/
-/*    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-/*    text-align: center;*/
-/*    border-radius: 8px;*/
-/*    background: rgb(17, 75, 48); !* Old browsers *!*/
-/*    background: -moz-linear-gradient(left, rgb(17, 73, 44) 0%, rgb(79, 187, 150) 100%); !* FF3.6-15 *!*/
-/*    background: -webkit-linear-gradient(left, rgb(17, 73, 44) 0%, rgba(86, 208, 166, 1) 100%); !* Chrome10-25,Safari5.1-6 *!*/
-/*    background: linear-gradient(to right, rgba(17, 73, 33, 1) 0%, rgb(86, 208, 166, 1) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
-/*    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c48a5', endColorstr='#fca079', GradientType=1); !* IE6-9 *!*/
-/*}*/
-/*.calculator__window {*/
-/*    border-top-left-radius: 10px;*/
-/*    border-top-right-radius: 8px;*/
-/*    height: 200px;*/
-/*}*/
-/*.calculator__result-window {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*}*/
-/*.calculator__result-window span {*/
-/*    margin-right: 40px;*/
-/*    margin-top: 40px;*/
-/*    font-size: 60px;*/
-/*}*/
-/*.calculator__operation-window {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*}*/
-/*.calculator__operation-window span {*/
-/*    margin-right: 40px;*/
-/*    margin-top: 30px;*/
-/*    font-size: 20px;*/
-/*    color: rgba(255, 255, 255, 0.51);*/
-/*}*/
-/*.counter-btns {*/
-/*    height: 300px;*/
-/*    border-radius: 5px;*/
 
-/*}*/
-/*.row {*/
-
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
-/*.btn {*/
-/*    color: #ffffff;*/
-/*    font-size: 25px;*/
-/*    font-weight: 400;*/
-/*    border: none;*/
-/*    background-color: rgb(50, 50, 50);*/
-/*    cursor: pointer;*/
-/*    height: 80px;*/
-/*    width: 94px;*/
-/*}*/
-/*.btn:hover{*/
-/*    color: #93e5d3;*/
-/*}*/
-/*.counter__inc-btn {*/
-/*    margin-left: 15px;*/
-/*}*/
-
-/*.counter__reset-btn {*/
-/*    margin-right: 15px;*/
-/*}*/
-/*.operator {*/
-/*    background-color: rgb(47, 47, 47);*/
-/*    color: #5daf98;*/
-/*}*/
-/*.equal {*/
-/*    background: rgb(27, 83, 55); !* Old browsers *!*/
-/*    color: white;*/
-/*    font-size: 40px;*/
-/*    border-bottom-right-radius: 8px;*/
-/*}*/
-/*.more{*/
-/*    border-bottom-left-radius: 8px;*/
-/*    color: #5daf98;*/
-/*}*/
-/*.calculator-title {*/
-/*    text-align: center;*/
-/*    margin: 10px;*/
-/*}*/
-
-/*button:focus {*/
-/*    outline: none !important*/
-/*}*/
-.switch-inner{
-margin-left: 100px;
+/*dark theme*/
+.calculator.dark{
+    background-color: rgb(48, 66, 58);
 }
+
+.calculator.dark .calculator__inner {
+    background: rgb(17, 75, 48); /* Old browsers */
+    background: -moz-linear-gradient(left, rgb(17, 73, 44) 0%, rgb(79, 187, 150) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgb(17, 73, 44) 0%, rgba(86, 208, 166, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(17, 73, 33, 1) 0%, rgb(86, 208, 166, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c48a5', endColorstr='#fca079', GradientType=1); /* IE6-9 */
+}
+
+.calculator.dark .calculator__operation-window span {
+    color: rgba(255, 255, 255, 0.51);
+}
+
+
+.calculator.dark .btn {
+    color: #ffffff;
+    background-color: rgb(50, 50, 50);
+}
+.calculator.dark .btn:hover{
+    color: #93e5d3;
+}
+
+.calculator.dark .operator {
+    background-color: rgb(47, 47, 47);
+    color: #5daf98;
+}
+.calculator.dark .equal {
+    background: rgb(27, 83, 55); /* Old browsers */
+    color: white;
+}
+.calculator.dark .more{
+    color: #5daf98;
+}
+
+
+/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -246,12 +182,9 @@ margin-left: 100px;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #5daf98;
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
 
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);

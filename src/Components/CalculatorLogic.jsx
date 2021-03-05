@@ -7,7 +7,7 @@ const CalculatorProvider = (props) => {
     let [storeValue, setStoreValue] = useState("")
     let [operator, setOperator] = useState("")
     let [result, setResult] = useState(0)
-    let [darkTheme, setDarkTheme] = useState(false)
+    let [theme, setTheme] = useState("light")
 
     //отрисовываем первое число
     const handleSetNumValue = (value) => {
@@ -92,6 +92,9 @@ const CalculatorProvider = (props) => {
         }
     };
 
+    const changeTheme = () => {
+      theme ==="light" ? setTheme("dark") : setTheme("light")
+    }
 
     return (
         <CalculatorContext.Provider
@@ -105,9 +108,11 @@ const CalculatorProvider = (props) => {
                 handleSetOperatorType,
                 handleResetResultValue,
                 calculateResult,
+                changeTheme,
                 storeValue,
                 operator,
-                result
+                result,
+                theme
             }}>
             {props.children}
         </CalculatorContext.Provider>
