@@ -50,10 +50,8 @@
 .counter-btns {
     height: 300px;
     border-radius: 5px;
-
 }
 .row {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,10 +90,6 @@
     border-bottom-left-radius: 8px;
     color: rgb(140, 72, 165);
 }
-.calculator-title {
-    text-align: center;
-    margin: 10px;
-}
 
 button:focus {
     outline: none !important
@@ -111,7 +105,7 @@ button:focus {
     background: rgb(17, 75, 48); /* Old browsers */
     background: -moz-linear-gradient(left, rgb(17, 73, 44) 0%, rgb(79, 187, 150) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, rgb(17, 73, 44) 0%, rgba(86, 208, 166, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(17, 73, 33, 1) 0%, rgb(86, 208, 166, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to right, rgba(17, 73, 33, 1) 0%, rgb(86, 208, 166) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c48a5', endColorstr='#fca079', GradientType=1); /* IE6-9 */
 }
 
@@ -200,3 +194,5 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+

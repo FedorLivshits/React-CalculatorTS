@@ -65,22 +65,25 @@ const CalculatorProvider = (props) => {
 
     //считаем результат
     const calculateResult = () => {
-
         if (numValue && storeValue && operator) {
             let num1 = parseInt(numValue)
             let num2 = parseInt(storeValue)
             switch (operator) {
                 case "+":
-                        setResult(num1 + num2);
+                        setResult( Math.round((num1 + num2) * 100) / 100);
                     break
                 case "-":
-                    setResult(num1 - num2);
+                    if (numValue < storeValue){
+                        setResult( -(Math.round((num1 - num2) * 100) / 100));
+                    } else{
+                        setResult( Math.round((num1 - num2) * 100) / 100);
+                    }
                     break
                 case "*":
-                    setResult(num1 * num2);
+                    setResult( Math.round((num1 * num2) * 100) / 100);
                     break
                 case "/":
-                    setResult(num1 / num2);
+                    setResult( Math.round((num1 / num2) * 100) / 100);
                     break
                 default:
                     break;
