@@ -61,7 +61,7 @@
     font-size: 25px;
     font-weight: 400;
     border: none;
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(244, 244, 244, 0.82);
     cursor: pointer;
     height: 80px;
     width: 94px;
@@ -77,7 +77,7 @@
     margin-right: 15px;
 }
 .operator {
-    background-color: rgb(234, 234, 234);
+    background-color: rgba(234, 234, 234, 0.91);
     color: rgb(228 121 78);
 }
 .equal {
@@ -98,14 +98,14 @@ button:focus {
 
 /*dark theme*/
 .calculator.dark{
-    background-color: rgb(48, 66, 58);
+    background-color: rgb(50, 50, 68);
 }
 
 .calculator.dark .calculator__inner {
-    background: rgb(17, 75, 48); /* Old browsers */
-    background: -moz-linear-gradient(left, rgb(17, 73, 44) 0%, rgb(79, 187, 150) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgb(17, 73, 44) 0%, rgba(86, 208, 166, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(17, 73, 33, 1) 0%, rgb(86, 208, 166) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: rgb(140, 72, 165); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(140, 72, 165, 1) 0%, rgba(252, 160, 121, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8c48a5', endColorstr='#fca079', GradientType=1); /* IE6-9 */
 }
 
@@ -116,22 +116,22 @@ button:focus {
 
 .calculator.dark .btn {
     color: #ffffff;
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(38, 39, 52, 0.87);
 }
 .calculator.dark .btn:hover{
-    color: #93e5d3;
+    color: orange;
 }
 
 .calculator.dark .operator {
-    background-color: rgb(47, 47, 47);
-    color: #5daf98;
+    background-color: rgba(38, 39, 52, 0.91);
+    color: #d49167;
 }
 .calculator.dark .equal {
-    background: rgb(27, 83, 55); /* Old browsers */
+    background: rgb(140, 72, 165);
     color: white;
 }
 .calculator.dark .more{
-    color: #5daf98;
+    color: rgb(140, 72, 165);
 }
 
 
@@ -176,7 +176,7 @@ button:focus {
 }
 
 input:checked + .slider {
-    background-color: #5daf98;
+    background-color: rgba(252, 160, 121, 1);
 }
 
 
