@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 export const CalculatorContext = React.createContext();
 
 const CalculatorProvider = (props) => {

@@ -1,15 +1,13 @@
 import React, {useContext} from "react";
 import PanelButton from "./PanelButton";
 import {CalculatorContext} from "./CalculatorLogic";
+import Switcher from "./common/Switcher";
 
 function Calculator() {
-    const {numValue, storeValue, operator, result, changeTheme, theme} = useContext(CalculatorContext);
+    const {numValue, storeValue, operator, result, theme} = useContext(CalculatorContext);
     return (
         <div className={`calculator ${theme}`}>
-                <label className="switch"  >
-                    <input type="checkbox" onClick={changeTheme}/>
-                    <span className="slider round"></span>
-                </label>
+                <Switcher/>
             <header className="calculator-page">
                 <div className="calculator__inner">
                     <div className="calculator__window">
