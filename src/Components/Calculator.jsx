@@ -4,6 +4,7 @@ import {CalculatorContext} from "./CalculatorLogic";
 import Switcher from "./common/Switcher";
 
 function Calculator() {
+
     const {numValue, storeValue, operator, result, theme} = useContext(CalculatorContext);
     return (
         <div className={`calculator ${theme}`}>
@@ -12,7 +13,7 @@ function Calculator() {
                 <div className="calculator__inner">
                     <div className="calculator__window">
                         <div className="calculator__result-window">
-                            <span> {result}</span>
+                            <span className={result.length < 10 ? "result" : "big__result"}> {result}</span>
                         </div>
                         <div className="calculator__operation-window">
                             <span> {storeValue} {operator} {numValue} </span>

@@ -4,7 +4,7 @@ import {CalculatorContext} from "./CalculatorLogic";
 function NumberButton(props) {
     const { handleSetNumValue } = useContext(CalculatorContext);
     return (
-        <button type="button" className="btn"  onClick={() => handleSetNumValue(props.buttonValue)}>
+        <button type="button" className={props.buttonValue === 0 ? "zero btn" : "btn"}  onClick={() => handleSetNumValue(props.buttonValue)}>
             {props.buttonValue}
         </button>
     )

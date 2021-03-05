@@ -32,11 +32,17 @@
     display: flex;
     justify-content: flex-end;
 }
-.calculator__result-window span {
+.result {
     margin-right: 40px;
     margin-top: 40px;
     font-size: 60px;
 }
+.big__result{
+    margin-right: 40px;
+    margin-top: 40px;
+    font-size: 35px;
+}
+
 .calculator__operation-window {
     display: flex;
     justify-content: flex-end;
@@ -86,9 +92,9 @@
     font-size: 40px;
     border-bottom-right-radius: 8px;
 }
-.more{
+.zero{
     border-bottom-left-radius: 8px;
-    color: rgb(140, 72, 165);
+    width: 188px;
 }
 
 button:focus {

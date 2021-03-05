@@ -11,7 +11,7 @@ const CalculatorProvider = (props) => {
     //отрисовываем первое число
     const handleSetNumValue = (value) => {
         if ((!numValue.includes('.') || value !== '.') && numValue.length < 8) {
-            setNumValue((numValue + value).replace(/^0+/, ''));
+            setNumValue(numValue + value);
         }
     }
     //сохраняем число в другой стэйт для возможности ввода второго
@@ -70,20 +70,20 @@ const CalculatorProvider = (props) => {
             let num2 = parseInt(storeValue)
             switch (operator) {
                 case "+":
-                        setResult( Math.round((num1 + num2) * 100) / 100);
+                        setResult(String( Math.round((num1 + num2) * 100) / 100));
                     break
                 case "-":
                     if (numValue < storeValue){
-                        setResult( -(Math.round((num1 - num2) * 100) / 100));
+                        setResult(String( -(Math.round((num1 - num2) * 100) / 100)));
                     } else{
-                        setResult( Math.round((num1 - num2) * 100) / 100);
+                        setResult(String( Math.round((num1 - num2) * 100) / 100));
                     }
                     break
                 case "*":
-                    setResult( Math.round((num1 * num2) * 100) / 100);
+                    setResult(String( Math.round((num1 * num2) * 100) / 100));
                     break
                 case "/":
-                    setResult( Math.round((num1 / num2) * 100) / 100);
+                    setResult(String( Math.round((num1 / num2) * 100) / 100));
                     break
                 default:
                     break;

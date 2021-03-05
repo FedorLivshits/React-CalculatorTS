@@ -36,7 +36,6 @@ const PanelButton = () => {
                 <OperatorButton buttonValue={"+"}/>
             </div>
             <div className="row">
-                <OperatorButton buttonValue={"more"}/>
                 <NumberButton buttonValue={0}/>
                 <NumberButton buttonValue={"."}/>
                 <EqualButton buttonValue={"="}/>
