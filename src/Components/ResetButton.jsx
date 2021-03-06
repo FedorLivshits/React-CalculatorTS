@@ -6,7 +6,7 @@ function ResetButton(props) {
     const {handleResetValue, handleResetResultValue, result} = useContext(CalculatorContext);
 
     return (
-        <button type="button"  onClick={(!result) ? handleResetValue : handleResetResultValue}
+        <button type="button"  onClick={(result === "0") ? handleResetValue : handleResetResultValue}
                 className="btn operator">
             {props.buttonValue}
         </button>

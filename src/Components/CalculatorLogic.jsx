@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 export const CalculatorContext = React.createContext();
 
 const CalculatorProvider = (props) => {
@@ -21,13 +22,13 @@ const CalculatorProvider = (props) => {
     }
 
     //сохраняем оператор
-    const handleSetOperatorType = (operatorType) => {
+    const handleSetOperatorType = (operator) => {
         if (numValue) {
-            setOperator(operatorType);
+            setOperator(operator);
             handleStoreValue();
         }
         if (storeValue) {
-            setOperator(operatorType);
+            setOperator(operator);
         }
     }
 
@@ -39,7 +40,7 @@ const CalculatorProvider = (props) => {
     }
     //Сбрасываем результат
     const handleResetResultValue = () => {
-        setResult(0)
+        setResult("0")
     }
     //удаляем по одному символу
     const handleClearValue = () => {
@@ -51,12 +52,13 @@ const CalculatorProvider = (props) => {
 
     //меняем знак числа на противоположный
     const handleNegative = () => {
-        if (numValue > 0) {
-            setNumValue(`-${numValue}`)
-        } else {
-            setNumValue(numValue.slice(1))
-        }
-        if (storeValue > 0) {
+        if (numValue) {
+            if (numValue > 0) {
+                setNumValue(`-${numValue}`)
+            } else {
+                setNumValue(numValue.slice(1))
+            }
+        } else if (storeValue > 0) {
             setStoreValue(`-${storeValue}`)
         } else {
             setStoreValue(storeValue.slice(1))
@@ -65,8 +67,8 @@ const CalculatorProvider = (props) => {
 
     //считаем результат
     const calculateResult = () => {
-        let num1 = parseFloat(numValue)
-        let num2 = parseFloat(storeValue)
+        let num1 = parseFloat(storeValue)
+        let num2 = parseFloat(numValue)
 
         if (numValue && storeValue && operator) {
             switch (operator) {
@@ -74,11 +76,7 @@ const CalculatorProvider = (props) => {
                     setResult(String(Math.round((num1 + num2) * 1000) / 1000))
                     break
                 case "-":
-                    if(numValue<storeValue){
-                        setResult(String(-(Math.round((num1 - num2) * 1000) / 1000)) )
-                    } else {
-                        setResult(String(Math.round((num1- num2) * 1000) / 1000))
-                    }
+                    setResult(String((Math.round((num1 - num2) * 1000) / 1000)))
                     break
                 case "*":
                     setResult(String(Math.round((num1 * num2) * 1000) / 1000))
@@ -96,7 +94,7 @@ const CalculatorProvider = (props) => {
     };
 
     const changeTheme = () => {
-      theme ==="light" ? setTheme("dark") : setTheme("light")
+        theme === "light" ? setTheme("dark") : setTheme("light")
     }
 
     return (
