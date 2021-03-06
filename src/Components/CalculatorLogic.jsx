@@ -5,7 +5,7 @@ const CalculatorProvider = (props) => {
     let [numValue, setNumValue] = useState("")
     let [storeValue, setStoreValue] = useState("")
     let [operator, setOperator] = useState("")
-    let [result, setResult] = useState(0)
+    let [result, setResult] = useState("0")
     let [theme, setTheme] = useState("light")
 
     //отрисовываем первое число
@@ -65,25 +65,26 @@ const CalculatorProvider = (props) => {
 
     //считаем результат
     const calculateResult = () => {
+        let num1 = parseFloat(numValue)
+        let num2 = parseFloat(storeValue)
+
         if (numValue && storeValue && operator) {
-            let num1 = parseInt(numValue)
-            let num2 = parseInt(storeValue)
             switch (operator) {
                 case "+":
-                        setResult(String( Math.round((num1 + num2) * 100) / 100));
+                    setResult(String(Math.round((num1 + num2) * 1000) / 1000))
                     break
                 case "-":
-                    if (numValue < storeValue){
-                        setResult(String( -(Math.round((num1 - num2) * 100) / 100)));
-                    } else{
-                        setResult(String( Math.round((num1 - num2) * 100) / 100));
+                    if(numValue<storeValue){
+                        setResult(String(-(Math.round((num1 - num2) * 1000) / 1000)) )
+                    } else {
+                        setResult(String(Math.round((num1- num2) * 1000) / 1000))
                     }
                     break
                 case "*":
-                    setResult(String( Math.round((num1 * num2) * 100) / 100));
+                    setResult(String(Math.round((num1 * num2) * 1000) / 1000))
                     break
                 case "/":
-                    setResult(String( Math.round((num1 / num2) * 100) / 100));
+                    setResult(String(Math.round((num1 / num2) * 1000) / 1000))
                     break
                 default:
                     break;

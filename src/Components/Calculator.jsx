@@ -13,7 +13,7 @@ function Calculator() {
                 <div className="calculator__inner">
                     <div className="calculator__window">
                         <div className="calculator__result-window">
-                            <span className={result.length < 10 ? "result" : "big__result"}> {result}</span>
+                            <span className={result.length < 10 || result === 0 ? "result" : "big__result"}> {result}</span>
                         </div>
                         <div className="calculator__operation-window">
                             <span> {storeValue} {operator} {numValue} </span>
