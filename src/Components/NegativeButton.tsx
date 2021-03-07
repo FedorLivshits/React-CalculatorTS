@@ -1,7 +1,9 @@
 import React, {useContext} from "react";
 import {CalculatorContext} from "./CalculatorLogic";
+import {ButtonValueType} from "./PanelButton";
 
-function NegativeButton(props) {
+
+function NegativeButton(props: ButtonValueType) {
     const {handleNegative} = useContext(CalculatorContext);
     return (
         <button type="button"  onClick={handleNegative}

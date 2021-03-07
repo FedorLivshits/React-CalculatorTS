@@ -7,6 +7,10 @@ import ClearButton from "./ClearButton";
 import NegativeButton from "./NegativeButton";
 
 
+export type ButtonValueType = {
+    buttonValue: number | string
+}
+
 
 const PanelButton = () => {
     return (

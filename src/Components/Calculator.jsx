@@ -4,7 +4,6 @@ import {CalculatorContext} from "./CalculatorLogic";
 import Switcher from "./common/Switcher";
 
 function Calculator() {
-
     const {numValue, storeValue, operator, result, theme} = useContext(CalculatorContext);
     return (
         <div className={`calculator ${theme}`}>

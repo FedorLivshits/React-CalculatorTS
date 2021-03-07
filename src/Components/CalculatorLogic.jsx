@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {ButtonValueType} from "./PanelButton";
 
 export const CalculatorContext = React.createContext();
 
@@ -53,12 +54,12 @@ const CalculatorProvider = (props) => {
     //меняем знак числа на противоположный
     const handleNegative = () => {
         if (numValue) {
-            if (numValue > 0) {
+            if (+numValue > 0) {
                 setNumValue(`-${numValue}`)
             } else {
                 setNumValue(numValue.slice(1))
             }
-        } else if (storeValue > 0) {
+        } else if (+storeValue > 0) {
             setStoreValue(`-${storeValue}`)
         } else {
             setStoreValue(storeValue.slice(1))
