@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {ButtonValueType} from "./PanelButton";
 
 export const CalculatorContext = React.createContext();
 

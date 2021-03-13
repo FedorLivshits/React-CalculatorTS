@@ -1,8 +1,8 @@
 .calculator{
     background-color: rgb(230, 233, 235);
+    height: 100vh;
 }
 .calculator-page {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
