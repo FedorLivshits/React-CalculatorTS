@@ -209,6 +209,9 @@ input:checked + .slider:before {
 }
 
 @media (max-height: 700px) {
+    .calculator__page{
+        top: 54%
+    }
     .calculator__inner {
         height: 550px;
     }
