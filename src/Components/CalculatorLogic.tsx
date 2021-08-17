@@ -1,8 +1,24 @@
-import React, {useState} from 'react';
+import React, {createContext, useState} from 'react'
 
-export const CalculatorContext = React.createContext();
+export type ContextType = {
+    numValue: string,
+    storeValue: string,
+    operator: string,
+    result: string,
+    theme: string,
+    handleSetNumValue: (value: string) => void,
+    handleStoreValue: () => void,
+    handleResetValue: () => void,
+    handleClearValue: () => void,
+    handleNegative: () => void,
+    handleSetOperatorType: (operator: string) => void,
+    handleResetResultValue: () => void,
+    calculateResult: () => void,
+    changeTheme: () => void,
+}
+export const CalculatorContext = createContext<ContextType>(undefined!);
 
-const CalculatorProvider = (props) => {
+const CalculatorProvider: React.FC = (props) => {
     let [numValue, setNumValue] = useState("")
     let [storeValue, setStoreValue] = useState("")
     let [operator, setOperator] = useState("")
@@ -10,7 +26,7 @@ const CalculatorProvider = (props) => {
     let [theme, setTheme] = useState("light")
 
     //отрисовываем первое число
-    const handleSetNumValue = (value) => {
+    const handleSetNumValue = (value: string) => {
         if ((!numValue.includes('.') || value !== '.') && numValue.length < 8) {
             setNumValue(numValue + value);
         }
@@ -22,7 +38,7 @@ const CalculatorProvider = (props) => {
     }
 
     //сохраняем оператор
-    const handleSetOperatorType = (operator) => {
+    const handleSetOperatorType = (operator: string) => {
         if (numValue) {
             setOperator(operator);
             handleStoreValue();

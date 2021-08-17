@@ -1,15 +1,15 @@
-import React, {useContext} from "react";
-import {CalculatorContext} from "../CalculatorLogic";
+import React, {useContext} from 'react'
+import {CalculatorContext} from '../CalculatorLogic'
 
-function Switcher() {
-    const {changeTheme} = useContext(CalculatorContext);
+const Switcher = () => {
+    const {changeTheme} = useContext(CalculatorContext)
     return (
-            <label className="switch"  >
-                <input type="checkbox" onClick={changeTheme}/>
-                <span className="slider round"></span>
-            </label>
+        <label className="switch">
+            <input type="checkbox" onClick={changeTheme}/>
+            <span className="slider round"></span>
+        </label>
 
     )
 }
 
-export default Switcher;
+export default Switcher
